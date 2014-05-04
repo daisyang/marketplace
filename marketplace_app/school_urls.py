@@ -6,5 +6,5 @@ urlpatterns = patterns('',
     # url(r'^$', 'marketplace.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
 
-    url(r'^$/', views.school_index, name='school_index'),
+    url(r'^$', views.school_index, name='school_index'),
 )

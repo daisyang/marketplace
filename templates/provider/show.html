@@ -1,0 +1,15 @@
+
+{% extends 'base.html' %}
+
+
+
+{% block  content%}
+    <div id="form_id" >
+{{ form.as_p}}
+    {% if is_submit != True %}
+        <script type="text/javascript">
+            $('#form_id input').attr('readonly', 'readonly');
+        </script>
+    {% endif %}
+    </div>
+{% endblock %}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Marketplace for SDP</title>
+		<link rel="stylesheet" type="text/css" href="http://tympanus.net/Blueprints/SplitLayout/css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="http://tympanus.net/Blueprints/SplitLayout/css/component.css" />
+		<script src="http://tympanus.net/Blueprints/SplitLayout/js/modernizr.custom.js"></script>
+	</head>
+
+	<body>
+		<div class="container">
+			<div id="splitlayout" class="splitlayout">
+				<div class="intro">
+					<div class="side side-left">
+						<header class="codropsheader clearfix">
+							<!-- <span><span class="bp-icon bp-icon-about" data-content="School Market place"></span></span> -->
+							<h1 title="where anything is possible here">Marketplace for SDP</h1>
+							<nav></nav>
+							<div class="demos" style="margin-top:30px; float: right; font-size:25px;">
+								<a href="{% url 'provider:provider_index' %}" class="current" ><u>Provider</u></a>
+								&nbsp;&nbsp;&nbsp;
+								<a href="{% url 'school:school_index' %}" class="" ><u>Receiver</u></a>
+							</div>
+						</header>
+
+						<div class="intro-content">
+							<div class="profile"><img src="https://cdn1.iconfinder.com/data/icons/ios7-active-2/512/Tools.png" alt="profile1"></div>
+							<h1><span>Service</span><span>I want service</span></h1>
+						</div>
+						<div class="overlay"></div>
+					</div>
+					<div class="side side-right">
+						<div class="intro-content">
+							<div class="profile"><img src="http://www.iconsdb.com/icons/preview/caribbean-blue/money-bag-xxl.png" alt="profile2"></div>
+							<h1><span>Funding</span><span>I want funding</span></h1>
+						</div>
+						<div class="overlay"></div>
+					</div>
+				</div><!-- /intro -->
+				<div class="page page-right">
+					<div class="page-inner">
+						<section>
+							<h2>I need funding</h2>
+							<p></p>
+                            <div>
+                                {% for p in providers %}
+                                {{ p.name }}
+                                {% endfor %}
+                            </div>
+						</section>
+						<section>
+							<h2></h2><p></p>
+						</section>
+					</div><!-- /page-inner -->
+				</div><!-- /page-right -->
+				<div class="page page-left">
+					<div class="page-inner">
+						<section>
+							<h2>I need service</h2>
+						</section>
+						<section>
+							<h2></h2><p></p>
+						</section>
+					</div><!-- /page-inner -->
+				</div><!-- /page-left -->
+				<a href="#" class="back back-right" title="back to Main" style="font-size:80px; margin-top: -125px;">&rarr;</a>
+				<a href="#" class="back back-left" title="back to Main" style="font-size:80px; margin-top: -125px;">&larr;</a>
+			</div><!-- /splitlayout -->
+		</div><!-- /container -->
+		<script src="http://tympanus.net/Blueprints/SplitLayout/js/classie.js"></script>
+		<script src="http://tympanus.net/Blueprints/SplitLayout/js/cbpSplitLayout.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	    <script src="https://github.com/hail2u/jquery.table-filter/blob/master/jquery.table-filter.min.js"></script>
+	      <script type="text/javascript">
+	          $(function () {
+	            $("table").addTableFilter({labelText: "Filtering results by: "});
+	          });
+	        </script>
+	</body>
+</html>

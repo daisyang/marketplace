@@ -1,0 +1,13 @@
+
+{% extends 'base.html' %}
+
+{% block  content%}
+<form method = 'POST' action='{% url 'provider:submit' %}' class ='cbp-mc-form'>
+    <div class="cbp-mc-column">
+{% csrf_token %}
+  {{ form.as_p }}
+    <br/> <input class = "button" type="submit" value = "submit"/>
+   </div>
+</form>
+
+{% endblock %}
